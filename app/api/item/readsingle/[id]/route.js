@@ -3,7 +3,7 @@ import { ItemModel } from "../../../../utils/schemaModels";
 import connectDB from "../../../../utils/database";
 
 export async function GET(request, context) {
-    const params = context.params;
+    const params = await context.params;
     try {
         await connectDB();
         const singleItem = await ItemModel.findById(params.id);
