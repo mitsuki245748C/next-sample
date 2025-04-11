@@ -10,7 +10,7 @@ const SearchItems = () => {
 
     useEffect(() => {
         const fetchItems = async () => {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/item/readall`)
+            const response = await fetch("/api/item/readall")
             const data = await response.json()
             setAllItems(data.allItems)
             setFilteredItems(data.allItems)
