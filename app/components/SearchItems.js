@@ -5,7 +5,7 @@ import Link from "next/link"
 
 const SearchItems = () => {
     const [searchText, setSearchText] = useState("")
-    const [allItems, setAllItems] = useState("")
+    const [allItems, setAllItems] = useState([])
     const [filteredItems, setFilteredItems] = useState([])
 
     useEffect(() => {
