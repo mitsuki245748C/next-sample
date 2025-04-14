@@ -17,7 +17,7 @@ const CreateItem = () => {
     const handleSubmit = async(e) => {
         e.preventDefault()
         try{
-            const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/item/create`, {
+            const response = await fetch("/api/item/create", {
                 method: "POST",
                 headers: {
                     "Accept": "application/json",
